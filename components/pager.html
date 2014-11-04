@@ -1,0 +1,9 @@
+<template name="krtPagerPager">
+	<div class="ui borderless pagination menu">
+		<a href="{{prev}}" class="icon item"><i class="left arrow icon"></i></a>
+		{{#each pages}}
+			<a href="{{link}}" class="item {{active}}">{{text}}</a>
+		{{/each}}
+		<a href="{{next}}" class="icon item"><i class="right arrow icon"></i></a>
+	</div>
+</template>
