@@ -3,13 +3,13 @@ var client = 'client', server = 'server', both = ['client', 'server'];
 Package.describe({
 	name: 'krt:pager',
 	summary: 'Koretech Pagination Package',
-	version: '0.1.0',
+	version: '0.1.1',
 	git: 'https://github.com/koretech/meteor-krt-pager.git'
 });
 
 Package.onUse(function(api){
 
-	api.versionsFrom('METEOR@0.9.4');
+	api.versionsFrom('METEOR@1.0');
 
 	api.use([
 		'krt:core@0.1.0',
@@ -17,14 +17,14 @@ Package.onUse(function(api){
 		'session',
 		'underscore',
 		'tmeasday:publish-counts@0.3.4',
-		'iron:router@1.0.0',
+		'iron:router@1.0.3',
 		'mquandalle:bower@0.1.11'
 	], both);
 
 	api.imply([
-		'krt:core@0.1.0',
-		'tmeasday:publish-counts@0.3.4',
-		'iron:router@1.0.0'
+		'krt:core',
+		'tmeasday:publish-counts',
+		'iron:router'
 	]);
 
 	api.addFiles([
